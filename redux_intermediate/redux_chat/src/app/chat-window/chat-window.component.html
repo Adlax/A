@@ -1,0 +1,31 @@
+<div class="">
+  <div class="">
+    <div class="">
+      <div class="">
+
+        <div class="panel-heading top-bar">
+          <div class="panel-title-container">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-comment"> </span> Chat - {{ currentThread.name }}
+            </h3>
+          </div>
+          <div class="panel-buttons-container">
+            <!-- tu pourais mettre ddes boutons de boites a outils ici -->
+          </div>
+        </div>
+
+        <div class="panel-body msg-container-base">
+          <chat-message *ngFor="message in messages" [message]="message"> </chat-message>
+        </div>
+
+        <div class="pane-footer">
+          <div class="input-group">
+            <input type="text" class="chat-input" placeholder="tapez votre message ici ..." (keydown.enter)="onEnter($event)" [(ngModel)]="draftMessage.text"/>
+            <span class="input-group-btn"> <button class="btn-chat" (click)="onEnter($event)"> SEND </button> </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
