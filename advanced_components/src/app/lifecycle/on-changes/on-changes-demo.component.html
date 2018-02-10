@@ -1,0 +1,16 @@
+<h4 class="ui horizontql header divider">
+  onChanges demo
+</h4>
+
+<div class="ui form">
+  <div class="field">
+    <label>Name</label>
+    <input type="text" #nameFld value="{{ name }}" (keyup)="setValues(nameFld,commentFld)">
+  </div>
+  <div class="field">
+    <label>Comment</label>
+    <textarea #commentFld (keyup)="setValues(nameFld,commentFld)" rows="2"> {{ comment }} </textarea>
+  </div>
+</div>
+
+<app-on-changes [name]="name" [comment]="comment"> </app-on-changes>

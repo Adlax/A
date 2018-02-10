@@ -1,0 +1,3 @@
+<app-comment *ngFor="comment of comments" [comment]="comment" (onRemove)="removeComment($event)"> </app-comment>
+
+<button class="ui primary button" (click)="addComment()"> Add a comment </button>
